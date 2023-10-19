@@ -3,24 +3,25 @@ import './ItemDetailContainer.css'
 import {useState, useEffect } from "react"
 import { getProductById } from "../../asyncMock"
 import ItemDetail from "../ItemDetail/ItemDetail"
+import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
 
     {/*↓ useSTATE.*/}
-const [product, setProduct] = useState (null)
+       const [product, setProduct] = useState (null)
+//obtenemos el id del producto y se lo pasamos a la funcion de getProductBy Id
+       const { itemId } = useParams()
 
-{/*↓ voy a hacer el llamado a una funcion: getProductById la cual esta contenida dentro de el archivo asyncmOCK donde escribiamos las funciones que simulaba el llamado de nuestros productos. y le paso el id harcodeado de un producto a mod de prueba.
-Una vez que la promesa se resuleve ese producto recibido se guarda en el ESTADO PRODUCT (del state ↑*/}
-useEffect ( () => {
-    getProductById('1')
-    .then( response => {
-        setProduct(response)
+       useEffect ( () => {
+          getProductById(itemId)
+             .then( response => {
+                 setProduct(response)
     })
     .catch(error => {
         console.error(error)
     })
 
-}, [] )
+}, [itemId] )
 
 //ese estado que hablamos anteriormente va a ser pasado por props "products"en este caso, al componente ItemList.
     return (

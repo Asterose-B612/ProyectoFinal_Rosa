@@ -1,6 +1,7 @@
 {/**COMPONENTE ITEM: VA A SER LA CARD DE NUESTROS PRODUCTOS */}
 
 import './Item.css'
+import { Link } from "react-router-dom";
 
 const Item = ({  id, image, title, price, itHadDues, isAnOffer, stock }) => {
 
@@ -25,7 +26,7 @@ const Item = ({  id, image, title, price, itHadDues, isAnOffer, stock }) => {
             </section>
 
             <footer className='ItemFooter'>
-            <button className='buttonDetalle'>Ver Detalle</button>
+            <Link to={`/item/${id}`} className='Option'>Ver Detalle</Link>
             </footer>
 
      </article>
