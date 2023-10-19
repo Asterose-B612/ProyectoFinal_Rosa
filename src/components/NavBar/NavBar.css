@@ -1,0 +1,11 @@
+.styleNavButton:hover {
+
+    font-weight: bold; 
+  
+    color: #ffffff; /* Cambio de color*/
+  
+    transform: scale(1.1); /* Efecto de escala */
+  
+    background-color: blue;
+   
+  }
