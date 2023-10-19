@@ -1,0 +1,14 @@
+.Counter{
+     overflow: hidden;   
+}
+
+.ButtonAgregar{
+    color:aquamarine
+}
+
+.ButtonCount {
+    font-size: 20px;
+    margin-left: 10px;
+    color: black;
+    border-color: gray;
+}
