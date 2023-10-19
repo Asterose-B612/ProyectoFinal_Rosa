@@ -157,3 +157,12 @@ const products = [
         }, 500)
     })
   }
+
+  //funcion find a partir del array del producto que recibe por parametros el productId utilizado para devolver aquel producto que queremos mostrar. El setTimeout emula los retrazos de la red
+  export const getProductById = (productId) => {
+    return new Promise ((resolve) => {
+        setTimeout(() => {
+            resolve (products.find( prod => prod.id === productId))
+        }, 500)
+    })
+  }
