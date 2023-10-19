@@ -3,7 +3,7 @@
 import { AppBar, Toolbar, Typography } from '@mui/material';
 import './Navbar.css';
 import CartWidget from '../CartWidget/CartWidget';
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link } from 'react-router-dom'
 
 const NavBar = () => {
 
@@ -32,10 +32,10 @@ const NavBar = () => {
                 </Link>
 
                 <div className='Categories'>
-                    <NavLink to={`/category/Notebooks`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' }>Notebooks</NavLink>
-                    <NavLink to={`/category/Tablets`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' }>Tablets</NavLink>
-                    <NavLink to={`/category/Smartphones`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} sx={styleNavButton}>Smartphones</NavLink>
-                </div> 
+                    <Link to={`/category/Notebooks`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' }>Notebooks</Link>
+                    <Link to={`/category/Tablets`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' }>Tablets</Link>
+                    <Link to={`/category/Smartphones`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} sx={styleNavButton}>Smartphones</Link>
+                </div>
 
 {/*carrito de compras*/}
                 <CartWidget/>

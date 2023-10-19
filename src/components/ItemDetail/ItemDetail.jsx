@@ -1,11 +1,18 @@
-
+{/**COMPONENTE ITEM: VA A SER LA CARD DE NUESTROS PRODUCTOS */}
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
+import {useState} from "react";
+import {Link} from 'react-router-dom'
 
-{/**COMPONENTE ITEM: VA A SER LA CARD DE NUESTROS PRODUCTOS */}
+{/*Estado: almacena la cantidad agregada de ese producto. La funcion q se ejecuta al hacer click en el boton del contador que se recibe por la prop onAdd */}
 
 const ItemDetail = ({  id, category, image, title, price, itHadDues, isAnOffer, stock }) => {
-
+//estado  para almacenarla cantidad agregada
+    const [quantityAdded, setQuantityAdded] = useState(0);
+    
+    const handleOnAdd = (quantity) => {
+        setQuantityAdded (quantity);
+    }
 
     return (
     
@@ -17,9 +24,9 @@ const ItemDetail = ({  id, category, image, title, price, itHadDues, isAnOffer, 
             </h2>
         </header>
 
-           <div> 
-           
-           <img className='ItemImg' src={image} alt={title}/> 
+           <div>
+
+           <img className='ItemImg' src={image} alt={title}/>
            </div>
 
             <section>
@@ -30,7 +37,22 @@ const ItemDetail = ({  id, category, image, title, price, itHadDues, isAnOffer, 
 
             <footer className='ItemFooter'>
                 {/**3 props tengo: valor iniial del contador, otra para el stock y otra con una funcion declarada que se va a ejecutar cuando haga click en el carrito */}
-            <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log ('Cantidad agregada', quantity)}/>
+
+                {quantityAdded > 0 ? (
+                    <Link to='/cart' className='Option'>Terminar compra
+                    </Link>
+
+                ) : (
+                    
+                    <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+                )}
+          
+           
+    
+
+
+            )
+          
             </footer>
 
      </article>
