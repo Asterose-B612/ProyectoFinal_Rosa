@@ -7,21 +7,21 @@ const Item = ({  id, image, title, price, itHadDues, isAnOffer, stock }) => {
 
     return (
     
-    <article>
+    <article className='cardItem'>
 
-        <header>
-            <h2>
+        <header className='header'>
+            <h2 className='ItemHeader'>
                 {title}
             </h2>
         </header>
 
            <div>
-                <img src={image} alt={title}/>
+                <img className='ItemImg' src={image} alt={title}/>
            </div>
 
             <section>
-                <p>Precio: ${price}</p>
-                <p>Stock: ${stock}</p>
+                <p className='Info'>Precio: ${price}</p>
+                <p className='Info'>Stock: ${stock}</p>
             </section>
 
             <footer className='ItemFooter'>

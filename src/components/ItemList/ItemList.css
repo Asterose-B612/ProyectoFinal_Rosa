@@ -1,0 +1,18 @@
+/*contenedor principal que envuelve la lista de productos*/
+.ListGroup {
+    display: flex; /*alinear los elementos en una fila,*/
+    flex-wrap: wrap;/*para q se envuelvan en filas adicionales si no caben en el ancho disponible*/
+    gap: 20px;/*espacio entre elementos*/
+    justify-content: center;/*centrado horizontalmente*/
+  }
+  
+  /* Estilos para cada elemento de la lista */
+  .ListGroup .Item {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+  }
+  
