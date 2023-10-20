@@ -1,16 +1,18 @@
   {/*CONTEXT : PARA MANTENER EL ESTADO DE COMPRA DEL USUARIO. QUE NOS DA LAS FUNCIONES RELACIONADAS AL CARRITO DE COMPRAS
-* */} 
-import { createContext, useState } from 'react';
+* */}
+import { createContext, useContext, useState } from 'react';
 
 // Creo un contexto para el carrito de compras
-export const CartContext = createContext ({ cart: [] })
+const CartContext = createContext ({
+  cart: []
+});
  
 {/*funcion que va a contener toda la lgica del carrito de compras (CartProvider, Va a recibir por props todos los componentes hijos, por lo cual v a ser un componente de alto orden*/} 
 export const CartProvider = ({ children }) => {
      // Para Almacenar los productos en el carrito
     //este es mi estado inicial
   const [cart, setCart] = useState([])
-  console.log (cart)
+  console.log (cart) 
 
 // agregar producto
 const addItem =(item, quantity) => {
@@ -45,4 +47,4 @@ const isInCart = (itemId) => {
   )
 
 }
-
+export default CartContext;

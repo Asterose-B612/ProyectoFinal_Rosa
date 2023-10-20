@@ -1,9 +1,11 @@
 {/**COMPONENTE ITEM: VA A SER LA CARD DE NUESTROS PRODUCTOS */}
+{/**COMPONENTE ITEM: VA A SER LA CARD DE NUESTROS PRODUCTOS */}
+
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
-import {useState} from "react";
+import {useContext,useState} from "react";
 import {Link} from 'react-router-dom'
-import {useContext, CartContext } from '../../context/CartContext'
+import { CartContext } from '../../context/CartContext'
 
 {/*Estado: almacena la cantidad agregada de ese producto. La funcion q se ejecuta al hacer click en el boton del contador que se recibe por la prop onAdd */}
 
