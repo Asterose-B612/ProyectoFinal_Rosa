@@ -3,7 +3,9 @@
 import AddShoppingCartSharpIcon from '@mui/icons-material/AddShoppingCartSharp';
 import './CartWidget.css';
 import { Link } from 'react-router-dom';
-import { CartContext,useContext} from '../../context/CartContext';
+import { CartContext} from '../../context/CartContext';
+import { useContext } from 'react';
+
 
 const CartWidget = () => {
   // Estilo del icono carrito
@@ -12,10 +14,14 @@ const CartWidget = () => {
     color: '#AB0C0C'
   };
 
+
   const { cart } = useContext(CartContext);
 
+
   // Calcula la cantidad total de elementos en el carrito
+  
   const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+
 
   return (
     <Link to="/cart" className="CartWidget" style={{ display: totalQuantity > 0 ? 'block' : 'none' }}>
@@ -24,5 +30,6 @@ const CartWidget = () => {
     </Link>
   );
 }
+
 
 export default CartWidget;
