@@ -1,9 +1,7 @@
-
-
 import React from 'react'
-
+import { useCartContext } from '../../context/CartContext';
 const CartItem = ({ id, title, price, quantity }) => {
-
+const {removeItem}= useCartContext()
   //renderizar las propiedades que llegan del map
 
   return (
