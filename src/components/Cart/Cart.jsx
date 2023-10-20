@@ -1,8 +1,10 @@
 import { useCartContext } from "../../context/CartContext";
-import { useContext } from "react";
 import CartItem from '../CartItem/CartItem'
 import { createContext } from "react";
 import {Link} from 'react-router-dom'
+import {useContext,useState} from "react";
+import { CartContext } from '../../context/CartContext'
+
 
 const Cart = () => {
   //tods las func y datos vienen del Cart Context
