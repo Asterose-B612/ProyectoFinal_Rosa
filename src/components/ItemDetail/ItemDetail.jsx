@@ -3,19 +3,28 @@ import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 import {useState} from "react";
 import {Link} from 'react-router-dom'
+import {useContext, CartContext } from '../../context/CartContext'
 
 {/*Estado: almacena la cantidad agregada de ese producto. La funcion q se ejecuta al hacer click en el boton del contador que se recibe por la prop onAdd */}
 
 const ItemDetail = ({  id, category, image, title, price, itHadDues, isAnOffer, stock }) => {
 //estado  para almacenarla cantidad agregada
     const [quantityAdded, setQuantityAdded] = useState(0);
+
+    const { addItem } = useContext (CartContext)
     
     const handleOnAdd = (quantity) => {
-        setQuantityAdded (quantity);
+        setQuantityAdded (quantity)
+//armo los datos del objeto
+        const item = {
+            id, title, price
+        }
+//esos datos se los paso a ña funcion addItem y cantidad qseleccionada x usuario
+        addItem (item, quantity)
     }
 
+
     return (
-    
     <article className='cardItem'>
 
         <header className='header'>
@@ -38,14 +47,12 @@ const ItemDetail = ({  id, category, image, title, price, itHadDues, isAnOffer, 
             <footer className='ItemFooter'>
                 {/**3 props tengo: valor iniial del contador, otra para el stock y otra con una funcion declarada que se va a ejecutar cuando haga click en el carrito */}
 
-                {quantityAdded > 0 ? (
+                {quantityAdded > 0 ?
                     <Link to='/cart' className='Option'>Terminar compra
                     </Link>
-
-                ) : (
-                    
+               :
                     <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
-                )}
+                }
           
            
     
