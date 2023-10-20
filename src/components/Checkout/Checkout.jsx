@@ -1,15 +1,15 @@
-import {db} from ' ../../services/firebase/ firebase'
-
+import { useContext, useState } from 'react'
 import CheckoutForm from '../CheckoutForm/CheckoutForm'
+import { CartContext } from '../../context/CartContext'
 
 
 
 const Checkout =() => {
 
-const [loading, setloading] = useState (false)
+const [loading, setloading] = useState(false)
 const[orderId, setOrderId] = useState ('')
 
-const { cart, total, clearCart } = useContext (CartContext)
+const { cart, total, clearCart } = useContext(CartContext)
 
 const createOrder = async ({ name, phone,email}) => {
 setloading (true)
@@ -24,14 +24,15 @@ try {
         date: Timestamp.fromDate (new Date())
     }
 
-const productAddedToCart = cart.find(prod => prod.id === document.id)
-const  prodQuantity =  productAddedToCart ? quantity
 
 
+}catch(error){
+console.log(error)
 }
 
 
 }
+
 
 if (loading) {
     return <h1>Se esta generando su orden...</h1>
