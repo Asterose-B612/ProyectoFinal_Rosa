@@ -1,5 +1,6 @@
 //import './Checkout.css'
 import {useState} from 'react'
+//import '.CheckoutForm.css'
 
 const CheckoutForm = ({onConfirm}) => {
 
@@ -13,18 +14,18 @@ const handleConfirm = (event) => {
     const userData = {
         name, phone, email
     }
-    onConfirm (useData)
+    onConfirm (userData)
 }
 
 return (
-    <div>
-        <form onSubmit = {handleConfirm}>
+    <div className='container'>
+        <form onSubmit = {handleConfirm} className='form'>
             <label className='label'>
                 Nombre
                 <input className='Input'
                  type ='text'
                  value={name}
-                 onChange={({target}) => setName(target.value)  } />
+                 onChange={({target}) => setName(target.value)} />
             </label>
 
 
@@ -33,7 +34,7 @@ return (
                 <input className='Input'
                  type ='text'
                  value={phone}
-                 onChange={({target}) => setName(target.value)  } />
+                 onChange={({target}) => setPhone(target.value)  } />
             </label>
 
 
@@ -42,7 +43,7 @@ return (
                 <input className='Input'
                  type ='email'
                  value={email}
-                 onChange={({target}) => setName(target.value)  } />
+                 onChange={({target}) => setEmail(target.value)  } />
             </label>
 
            <div>
