@@ -6,7 +6,7 @@ import {useState, useEffect } from "react"
 //import { getProducts, getProductsByCategory } from "../../asyncMock"
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
-import { getDocs, collection, query, where } from 'firebase/Firestore'
+import { getDocs, collection, query, where } from 'firebase/firestore'
 import {db} from '../../Services/firebase/FirebaseConfig'
 
 //  ↓  funcion que recibe una prop greeting, se coloca entre llaves. Y lo muestro con el return→ en un h1 (valor devuelto)
