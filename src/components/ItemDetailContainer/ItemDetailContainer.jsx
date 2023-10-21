@@ -1,36 +1,44 @@
 {/* ESTE COMPONENTE SE ENCARGA DE MOSTRAR EL DETALLE DE UNO DE LOS PRODUCTOS*/}
 import './ItemDetailContainer.css'
 import {useState, useEffect } from "react"
-import { getProductById } from "../../asyncMock"
+//import { getProductById } from "../../asyncMock"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from 'react-router-dom';
 
+import {getDoc, doc } from 'firebase/firestore'
+import { db } from '../../Services/firebase/FirebaseConfig';
+
 const ItemDetailContainer = () => {
 
-    {/*↓ useSTATE.*/}
-       const [product, setProduct] = useState (null)
-//obtenemos el id del producto y se lo pasamos a la funcion de getProductBy Id
-       const { itemId } = useParams()
+    const [product, setProduct] = useState (null)
+    const [loading, setLoading] = useState(true)
+    const { itemId } = useParams()
 
-       useEffect ( () => {
-          getProductById(itemId)
-             .then( response => {
-                 setProduct(response)
-    })
-    .catch(error => {
-        console.error(error)
-    })
+    useEffect ( () => {
+        setLoading(true)
 
-}, [itemId] )
+        const docRef = doc(db, 'products', itemId)
+//refrencia solo a un documento de la coleccion
+getDoc(docRef)
+.then((response) => {
+  const data = response.data()
+  const productAdapted = { id: response.id, ...data }
+  setProduct(productAdapted)
+})
+.catch((error) => {
+  console.log(error)
+})
+.finally(() => {
+  setLoading(false)
+})
+}, [itemId])
 
 //ese estado que hablamos anteriormente va a ser pasado por props "products"en este caso, al componente ItemList.
-    return (
-
-        <div className='ItemDetailContainer'>
-         <ItemDetail {...product} />
-        </div>
-
-        )
+return (
+    <div className="ItemDetailContainer">
+      <ItemDetail {...product} />
+    </div>
+  )
 }
 
 export default ItemDetailContainer;
