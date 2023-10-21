@@ -41,7 +41,7 @@ try {
    
     const productsRef = collection (db, 'products')
     
-    const productsAddedFromFirestore= await getDocs(query(productsRef, where(documentId(), 'in',)))
+    const productsAddedFromFirestore= await getDocs(query(productsRef, where(documentId(), 'in',ids)))
    
     const {docs} = productsAddedFromFirestore
 
