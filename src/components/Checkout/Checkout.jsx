@@ -30,7 +30,7 @@ try {
             name, phone, email
         },
         item : cart,
-        total: total ,
+        total: total() ,
         date: Timestamp.fromDate (new Date())
     }
     const batch = writeBatch (db)
