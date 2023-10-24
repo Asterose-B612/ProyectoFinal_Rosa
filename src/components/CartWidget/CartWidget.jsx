@@ -24,7 +24,7 @@ const CartWidget = () => {
 
 
   return (
-    <Link to="/cart" className="CartWidget">
+    <Link to="/cart">
       <AddShoppingCartSharpIcon style={iconStyle} />
       {totalQuantity}
     </Link>

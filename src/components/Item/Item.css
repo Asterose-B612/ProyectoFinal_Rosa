@@ -1,19 +1,25 @@
 /* Item.css */
 
 .cardItem {
-    border: 1px solid #ccc;
+  /*  border: 1px solid #ccc;*/
     border-radius: 8px;
-    margin: 10px;
-    padding: 10px;
-    width: 300px;
+  margin-top: 10vh;
+    padding: 5vh;
+    width: 30vh;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #fff;
   }
   
   .header {
     text-align: center;
+    margin-bottom: 2vh;
   }
   
+.ItemImgContainer{
+  height: 30vh;
+  width: 30vh;
+}
+
   .ItemHeader {
     font-size: 1.5em;
     margin: 0;
@@ -32,6 +38,8 @@
   
   .ItemFooter {
     text-align: center;
+    padding-top: 2vh;
+    text-decoration: none;
   }
   
   .buttonDetalle {

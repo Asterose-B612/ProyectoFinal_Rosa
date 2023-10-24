@@ -4,7 +4,7 @@ import { createContext } from "react";
 import {Link} from 'react-router-dom'
 import {useContext,useState} from "react";
 import { CartContext } from '../../context/CartContext'
-
+import './Cart.css';
 
 const Cart = () => {
   //tods las func y datos vienen del Cart Context
@@ -13,8 +13,8 @@ const Cart = () => {
     if (totalQuantity === 0) {
         return(
             <div>
-             <h2>Carrito vacío</h2>
-                <Link to ='/' className='Option'>Productos</Link>
+             <h2> Carrito vacío </h2>
+                <Link to ='/' className='OptionCarrito'>Productos</Link>
             </div>
         )
     }
@@ -24,8 +24,8 @@ const Cart = () => {
         <div>
             { cart.map(p => <CartItem key={p.id}  {...p}/> ) }
             <h3>Total: ${total}</h3>
-            <button onClick={ () => clearCart() } className='Button'>Vaciar Carrito</button>
-            <Link to = '/checkout' className='Option'>Checkout</Link>
+            <button onClick={ () => clearCart() } className='ButtonVaciar'> Vaciar Carrito </button>
+            <Link to = '/checkout' className='ButtonCheckout'>Checkout</Link>
             </div>
     )
 

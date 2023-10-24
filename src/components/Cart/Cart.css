@@ -1,0 +1,36 @@
+/* Cart.css */
+.OptionCarrito {
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .ButtonVaciar {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .ButtonCheckout {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    text-decoration: none; /* Evita el subrayado de estilo de los enlaces */
+    display: inline-block; /* Asegura que el botón se muestre como bloque en línea */
+  }
+  
+
+  

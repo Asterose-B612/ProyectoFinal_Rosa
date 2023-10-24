@@ -8,16 +8,20 @@ import { NavLink, Link } from 'react-router-dom'
 const NavBar = () => {
 
     const styleNavButton = {
-
         textTransform: 'none',
         fontSize: '1.8vh',
         color: '#333',
-        border: 'none', // Elimina el borde del botón
-        backgroundColor: 'transparent', // Fondo transparente
+        border: 'none',
+        backgroundColor: 'transparent',
         transition: 'transform 0.2s',
+        margin: '2vh',
 
+      '&:hover': { 
+      transform: 'scale(1.1)', // Cambiar el tamaño del botón al hacer hover
+          color: 'blue', // Cambiar el color de texto al hacer hover
+        },
       };
-      
+
 
     return (
 
@@ -26,15 +30,15 @@ const NavBar = () => {
             <Toolbar sx={{backgroundColor:'lightgrey', display: 'flex', justifyContent: 'space-between'}}>
               
                <Link to='/'>
-                    <Typography sx={{fontSize: '35px', fontWeight: 'bold'}}>
+                    <h1 className='Gerhard'>
                             Gerhard
-                    </Typography>
+                    </h1>
                 </Link>
 
                 <div className='Categories'>
-                    <Link to={`/category/Notebooks`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' }>Notebooks</Link>
-                    <Link to={`/category/Tablets`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' }>Tablets</Link>
-                    <Link to={`/category/Smartphones`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} sx={styleNavButton}>Smartphones</Link>
+                    <NavLink to={`/category/Notebooks`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' } style={styleNavButton}>Notebooks</NavLink>
+                    <NavLink to={`/category/Tablets`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' } style={styleNavButton}>Tablets</NavLink>
+                    <NavLink to={`/category/Smartphones`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} style={styleNavButton}>Smartphones</NavLink>
                 </div>
 
 {/*carrito de compras*/}
