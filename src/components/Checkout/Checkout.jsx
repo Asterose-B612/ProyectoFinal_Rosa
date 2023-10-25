@@ -48,10 +48,7 @@ const Checkout = () => {
       return;
     }
 
-    const createOrder = async ({ name, phone, email }) => {
-      setLoading(true);
-      
-      try {
+       try {
       const objOrder = {
       buyer: {
       name, phone, email
