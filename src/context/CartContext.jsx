@@ -44,19 +44,19 @@ const isInCart = (itemId) => {
   return  cart.some (prod => prod.id === itemId)
 }
 
-const totalPrice = () => {
+const total = () => {
   // Calcula el total sumando el precio de cada producto multiplicado por su cantidad en el carrito
-  const totalPrice = cart.reduce((acc, item) => {
+  const total = cart.reduce((acc, item) => {
     return acc + item.price * item.quantity;
   }, 0);
-  return totalPrice;
+  return total;
 };
 
 
 //esta sintaxis SIEMPRE VA A SER IGUAL cuado yo tenga un contexto
 //todas las funciones son compartidas a los componentes hijos a traves de value y un objeto q la contiene
 return (
-  <CartContext.Provider value = {{cart, addItem, removeItem, clearCart, totalPrice}}>
+  <CartContext.Provider value = {{cart, addItem, removeItem, clearCart, total}}>
       {children}
   </CartContext.Provider>
 )

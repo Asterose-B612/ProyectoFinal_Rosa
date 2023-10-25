@@ -8,6 +8,8 @@ import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 import { getDocs, collection, query, where } from 'firebase/firestore'
 import {db} from '../../Services/firebase/FirebaseConfig'
+import Banner from '../Banner/Banner'
+import Footer from '../Footer/Footer'
 
 //  ↓  funcion que recibe una prop greeting, se coloca entre llaves. Y lo muestro con el return→ en un h1 (valor devuelto)
 const ItemListContainer = ({greeting}) => {
@@ -51,8 +53,15 @@ return (
         <ItemList products={products} />
       </div>
     )}
+
+<Banner/>
+<Footer/>
   </div>
+
+
 );
 };
+
+
 
 export default ItemListContainer;
