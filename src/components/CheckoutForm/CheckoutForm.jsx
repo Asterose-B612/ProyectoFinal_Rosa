@@ -19,12 +19,16 @@ const handleConfirm = (event) => {
 
 return (
     <div className='containerForm'>
+<h2>Terminar compra</h2>
+<h3 className='porFavor'>Por favor, complete los campos con sus datos.</h3>
+
         <form onSubmit = {handleConfirm} className='form'>
             <label className='label'>
                
                 <input className='Input'
                  type ='text'
-                 placeholder='name'
+                 placeholder='nombre y apellido'
+                 name='name'
                  value={name}
                  onChange={({target}) => setName(target.value)} />
             </label>
@@ -33,7 +37,8 @@ return (
             <label className='label'>
                 <input className='Input'
                  type ='text'
-                 placeholder='teléfono'
+                 placeholder='teléfono '
+                 name='phone'
                  value={phone}
                  onChange={({target}) => setPhone(target.value)  } />
             </label>
@@ -43,12 +48,24 @@ return (
                 <input className='Input'
                  type ='email'
                  placeholder='email'
+                 name='email'
                  value={email}
                  onChange={({target}) => setEmail(target.value)  } />
             </label>
 
+            <label className='label'>
+                <input className='Input'
+                 type ='email'
+                 placeholder='Repita su email'
+                 name='email'
+                 value={email}
+                 onChange={({target}) => setEmail(target.value)  } />
+            </label>
+
+
+
            <div>
-            <button className='BotonSubmit' type='submit'>Crear Orden</button>
+            <button className='BotonSubmit' type='submit'>Generar Orden</button>
            </div>
         </form>
     </div>

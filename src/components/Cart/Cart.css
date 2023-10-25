@@ -1,4 +1,6 @@
-/* Cart.css */
+
+
+
 .OptionCarrito {
     display: block;
     margin: 10px;
@@ -11,7 +13,7 @@
   }
   
   .ButtonVaciar {
-    background-color: #ff0000;
+    background-color: #1f1f1f;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -20,17 +22,38 @@
     margin-top: 10px;
   }
   
+  .ButtonVaciar:hover {
+    background-color: #7e7e7e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+
   .ButtonCheckout {
-    background-color: #ff0000;
+    background-color: #1f1f1f;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin: 10px;
-    text-decoration: none; /* Evita el subrayado de estilo de los enlaces */
-    display: inline-block; /* Asegura que el botón se muestre como bloque en línea */
+    text-decoration: none; 
+    display: inline-block;
   }
   
-
+  .ButtonCheckout:hover {
+    background-color: #7e7e7e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    text-decoration: none; 
+    display: inline-block;
+  }
   

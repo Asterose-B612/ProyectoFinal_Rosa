@@ -1,3 +1,9 @@
+.porFavor {
+
+    margin-bottom: 5vh;
+}
+
+
 .containerForm {
     display: flex;
     flex-direction: column;
@@ -20,6 +26,7 @@
   }
   
   .containerForm {
+    display: flex;
     background-color: rgb(245, 245, 245);
     padding: 15vh;
     border-radius: 5px; 

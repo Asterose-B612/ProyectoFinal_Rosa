@@ -1,7 +1,7 @@
 {/*ItemListContainer: Dentro de este componente contenedor vamos a escribir la logica de estado relacionada al listado de nuestros  productos. Ademas de este componente requerimos dos componentes de presentacion.
 1° ItemList: Uno es el encargado de listar los productos.
 2° Item: Se va a encargar de ser la card de cada uno de los productos .*/}
-
+import './ItemListContainer.css'
 import {useState, useEffect } from "react"
 //import { getProducts, getProductsByCategory } from "../../asyncMock"
 import ItemList from '../ItemList/ItemList'
@@ -47,7 +47,7 @@ return (
       <p> Cargando...</p>
     ) : (
       <div>
-        <h1>{greeting}</h1>
+        <h1 className='greeting'>{greeting}</h1>
         <ItemList products={products} />
       </div>
     )}

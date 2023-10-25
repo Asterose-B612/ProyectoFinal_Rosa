@@ -1,6 +1,7 @@
  {/*CONTEXT : PARA MANTENER EL ESTADO DE COMPRA DEL USUARIO. QUE NOS DA LAS FUNCIONES RELACIONADAS AL CARRITO DE COMPRAS
 * */}
 import { createContext, useContext, useState } from 'react';
+//import './CartContext.css'
 
 // Creo un contexto para el carrito de compras
 export const CartContext = createContext ({
@@ -43,19 +44,19 @@ const isInCart = (itemId) => {
   return  cart.some (prod => prod.id === itemId)
 }
 
-const total = () => {
+const totalPrice = () => {
   // Calcula el total sumando el precio de cada producto multiplicado por su cantidad en el carrito
-  const total = cart.reduce((acc, item) => {
+  const totalPrice = cart.reduce((acc, item) => {
     return acc + item.price * item.quantity;
   }, 0);
-  return total;
+  return totalPrice;
 };
 
 
 //esta sintaxis SIEMPRE VA A SER IGUAL cuado yo tenga un contexto
 //todas las funciones son compartidas a los componentes hijos a traves de value y un objeto q la contiene
 return (
-  <CartContext.Provider value = {{cart, addItem, removeItem, clearCart, total}}>
+  <CartContext.Provider value = {{cart, addItem, removeItem, clearCart, totalPrice}}>
       {children}
   </CartContext.Provider>
 )
