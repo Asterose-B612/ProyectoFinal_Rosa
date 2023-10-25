@@ -52,16 +52,9 @@ const ItemDetail = ({  id, category, image, title, price, itHadDues, isAnOffer, 
                 {/**3 props tengo: valor iniial del contador, otra para el stock y otra con una funcion declarada que se va a ejecutar cuando haga click en el carrito */}
 
                 {quantityAdded > 0 ?
-                    <Link to='/cart' className='btnTerminarCompra'> Terminar compra
-                    </Link>  :   <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+                    <Link to='/cart' className='btnTerminarCompra'> Terminar compra </Link>  :   <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
                 }
-          
-           
-    
-
-
-            )
-          
+                
             </footer>
 
      </article>
