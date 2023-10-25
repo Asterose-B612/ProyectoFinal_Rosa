@@ -1,19 +1,33 @@
-.styleNavButton:hover {
-
-    font-weight: bold; 
-  
-    color: #ffffff; /* Cambio de color*/
-  
-    transform: scale(1.1); /* Efecto de escala */
-  
-    background-color: blue;
-   
-  }
-
-
   .Gerhard {
     font-size: 3vh;
     font-weight: bold;
     color: white;
   }
 
+  .Option {
+    text-transform: none;
+    font-size: 1.8vh;
+    color: #5a5a5a;
+    border: none;
+    background-color: transparent;
+    transition: transform 0.2s;
+    margin: 2vh;
+  }
+  
+  .Option:hover {
+    color: rgb(255, 0, 170);
+    font-weight: bold;
+    transform: scale(1.8);
+    
+  }
+
+  .ActiveOption {
+    text-transform: none;
+    font-size: 2vh;
+    color: rgb(63, 0, 52); /* Cambia el color de texto para enlace activo */
+    border: none;
+    background-color: transparent;
+    margin: 2vh;
+    font-weight: bold;
+    /* Agregar otros estilos específicos para enlace activo si es necesario */
+  }

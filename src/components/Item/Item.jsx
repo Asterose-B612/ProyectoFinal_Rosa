@@ -27,7 +27,7 @@ const Item = ({  id, image, title, price, itHadDues, isAnOffer, stock }) => {
             </section>
 
             <section className='ItemFooter'>
-            <NavLink to={`/item/${id}`} className='Option'> Ver Detalle </NavLink>
+            <NavLink to={`/item/${id}`} className='buttonDetalle'> Ver Detalle </NavLink>
             </section>
 
      </article>

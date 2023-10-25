@@ -7,22 +7,6 @@ import { NavLink, Link } from 'react-router-dom'
 
 const NavBar = () => {
 
-    const styleNavButton = {
-        textTransform: 'none',
-        fontSize: '1.8vh',
-        color: '#333',
-        border: 'none',
-        backgroundColor: 'transparent',
-        transition: 'transform 0.2s',
-        margin: '2vh',
-
-      '&:hover': { 
-      transform: 'scale(1.1)', // Cambiar el tamaño del botón al hacer hover
-          color: 'blue', // Cambiar el color de texto al hacer hover
-        },
-      };
-
-
     return (
 
         <AppBar>
@@ -36,9 +20,9 @@ const NavBar = () => {
                 </Link>
 
                 <div className='Categories'>
-                    <NavLink to={`/category/Notebooks`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' } style={styleNavButton}>Notebooks</NavLink>
-                    <NavLink to={`/category/Tablets`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' } style={styleNavButton}>Tablets</NavLink>
-                    <NavLink to={`/category/Smartphones`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} style={styleNavButton}>Smartphones</NavLink>
+                    <NavLink to={`/category/Notebooks`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' } >Notebooks</NavLink>
+                    <NavLink to={`/category/Tablets`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' } >Tablets</NavLink>
+                    <NavLink to={`/category/Smartphones`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'} >Smartphones</NavLink>
                 </div>
 
 {/*carrito de compras*/}

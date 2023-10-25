@@ -4,7 +4,9 @@
     flex-wrap: wrap;/*para q se envuelvan en filas adicionales si no caben en el ancho disponible*/
     gap: 20px;/*espacio entre elementos*/
     justify-content: center;/*centrado horizontalmente*/
+    margin-bottom: 20px;
   }
+
   
   /* Estilos para cada elemento de la lista */
   .ListGroup .Item {
@@ -15,4 +17,4 @@
     width: 250px;
     text-align: center;
   }
-  
+   

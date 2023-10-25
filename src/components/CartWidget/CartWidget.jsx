@@ -11,12 +11,12 @@ const CartWidget = () => {
   // Estilo del icono carrito
   const iconStyle = {
     fontSize: '4vh',
-    color: '#AB0C0C'
+    color: 'white'
+
   };
 
 
   const { cart } = useContext(CartContext);
-
 
   // Calcula la cantidad total de elementos en el carrito
   
@@ -26,7 +26,7 @@ const CartWidget = () => {
   return (
     <Link to="/cart">
       <AddShoppingCartSharpIcon style={iconStyle} />
-      {totalQuantity}
+      <span className='counterStyle'>{totalQuantity}</span>
     </Link>
   );
 }

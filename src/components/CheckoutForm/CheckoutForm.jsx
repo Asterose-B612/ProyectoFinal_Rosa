@@ -1,6 +1,6 @@
 //import './Checkout.css'
 import {useState} from 'react'
-//import '.CheckoutForm.css'
+import './CheckoutForm.css'
 
 const CheckoutForm = ({onConfirm}) => {
 
@@ -18,30 +18,31 @@ const handleConfirm = (event) => {
 }
 
 return (
-    <div className='container'>
+    <div className='containerForm'>
         <form onSubmit = {handleConfirm} className='form'>
             <label className='label'>
-                Nombre
+               
                 <input className='Input'
                  type ='text'
+                 placeholder='name'
                  value={name}
                  onChange={({target}) => setName(target.value)} />
             </label>
 
 
             <label className='label'>
-                Telefono
                 <input className='Input'
                  type ='text'
+                 placeholder='teléfono'
                  value={phone}
                  onChange={({target}) => setPhone(target.value)  } />
             </label>
 
 
             <label className='label'>
-                Email
                 <input className='Input'
                  type ='email'
+                 placeholder='email'
                  value={email}
                  onChange={({target}) => setEmail(target.value)  } />
             </label>

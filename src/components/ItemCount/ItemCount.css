@@ -1,14 +1,60 @@
-.Counter{
-     overflow: hidden;   
+.btnAgregar {
+    font-size: 1.8vh;
+    background-color: rgb(44, 44, 44);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+  }
+
+  
+.btnAgregar:hover {
+    background-color: rgb(139, 139, 139);
+    color: white;
+    font-size: 1.9vh;
+  }
+
+.controlsContainer{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
 }
 
-.ButtonAgregar{
-    color:aquamarine
-}
+.buttonCount {
+    display: flex; /* Establece el elemento como un contenedor flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    height: 4vh;
+    font-size: 2vh;
+    margin-right: 2vh;
+    margin-left: 2vh;
+    color: rgb(255, 255, 255);
+    border-color: gray;
+    background-color: rgb(44, 44, 44);
+  }
+  
 
-.ButtonCount {
-    font-size: 20px;
-    margin-left: 10px;
+  .buttonCount:hover {
+    height: 4vh;
+   font-size: 20px; 
+   margin-right: 2vh;
+   margin-left: 2vh;
+   color: rgb(255, 255, 255);
+   border-color: rgb(138, 99, 99);
+   background-color: rgb(85, 44, 44);
+  }
+
+
+
+  .number {
+    font-size: 2vh; 
+    margin-right: 1vh;
+    margin-left: 1vh;
     color: black;
     border-color: gray;
-}
+   }
+
+

@@ -1,0 +1,64 @@
+/* Item.css */
+
+.cardItem {
+    /*  border: 1px solid #ccc;*/
+      border-radius: 8px;
+      margin-top: 5vh;
+     padding: 5vh;
+      width: 30vh;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 2vh;
+    }
+    
+  .ItemImgContainer{
+    height: 30vh;
+    width: 30vh;
+  }
+  
+    .ItemHeader {
+      font-size: 1.6em;
+      margin: 0;
+      color: #333;
+    }
+    
+    .ItemImg {
+      max-width: 100%;
+      height: auto;
+      padding-bottom: 4vh;
+    }
+    
+    .Info {
+      font-size: 1.3em;
+      margin: 5px 0;
+      font-weight: bold;
+      color: rgb(83, 83, 83);
+    }
+    
+    .ItemFooter {
+      text-align: center;
+      padding-top: 2vh;
+      text-decoration: none;
+    }
+    
+    .btnTerminarCompra {
+        font-size: 1.8vh;
+        background-color: rgb(44, 44, 44);
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        margin-left: 20px;
+        border-radius: 5px;
+    }
+    
+    .btnTerminarCompra:hover {
+        background-color: rgb(139, 139, 139);
+        color: white;
+        font-size: 1.9vh;
+    }
+  
+    

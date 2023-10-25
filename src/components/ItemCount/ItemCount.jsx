@@ -25,33 +25,21 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         <div className= 'Counter'>
 
             {/* inicio controles del contador */} 
-            <div className='Controls'> 
-            <button className='ButtonCount' onClick={decrement} style={{ fontSize: "20px", marginRight: "10px", color: "black", borderColor: 'gray' }}  disabled={quantity <= 1}>  -  </button>
+            <div className='controlsContainer'> 
+            <button className='buttonCount' onClick={decrement} disabled={quantity <= 1}>  -  </button>
             {/* disabled para deshabilitar el botón de decremento cuando la cantidad es igual a 1.. */}
 
-            <h4 className='Number' style={{ fontSize: "2vh", marginRight: "1vh", marginLeft: "1vh",color: "black", borderColor: 'gray' }}>{quantity}</h4>
+            <h4 className='number'>{quantity}</h4>
 
-            <button className='ButtonCount' onClick={increment} style={{ fontSize: "20px", marginLeft: "10px", color: "black", borderColor: 'gray' }} disabled={quantity >= stock}>  +  </button>
+            <button className='buttonCount' onClick={increment}  disabled={quantity >= stock}>  +  </button>
             </div>{/* disabled para deshabilitar el botón de incremento cuando la cantidad alcanza el stock disponible. */}
 
 
            {/* inicio boton Agregar al carrito.IMPORTANTE TENER EN CUENTA!!: Este boton va a ejecutar como CallBack la funcion recibida por props ONADD y se le va a pasar como argumento la cantidad del estado. En caso de no tener stock disponible debemos evitar que se ejecute esta función.Usando la propiedad disable del boton  validando que haya stock disponible*/}
             <div> 
-                <button className='ButtonAgregar'  onClick={() => onAdd(quantity)}
-    disabled={!stock || quantity === 0}
-                style={{
-                    fontSize: "1.8vh",
-                    backgroundColor: "gray",
-                    color: "lightgray",
-                    padding: "5px 10px",
-                    marginLeft: "20px",
-                    borderRadius: "5px",
-                    border: "none",}}>
-
-                Agregar al carrito
-                </button>
-            </div> {/*deshabilitar el botón "Agregar al carrito" si no hay stock disponible.
- */}
+                <button className='btnAgregar'  onClick={() => onAdd(quantity)}
+    disabled={!stock || quantity === 0}> Agregar al carrito </button>
+            </div> {/*deshabilitar el botón "Agregar al carrito" si no hay stock disponible.*/}
 
         </div>//fin counter
     );

@@ -3,8 +3,8 @@
 .cardItem {
   /*  border: 1px solid #ccc;*/
     border-radius: 8px;
-  margin-top: 10vh;
-    padding: 5vh;
+    margin-top: 5vh;
+   padding: 5vh;
     width: 30vh;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #fff;
@@ -21,7 +21,7 @@
 }
 
   .ItemHeader {
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin: 0;
     color: #333;
   }
@@ -32,8 +32,10 @@
   }
   
   .Info {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin: 5px 0;
+    font-weight: bold;
+    color: rgb(83, 83, 83);
   }
   
   .ItemFooter {
@@ -43,7 +45,7 @@
   }
   
   .buttonDetalle {
-    background-color: #007bff;
+    background-color:  rgb(44, 44, 44);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -52,6 +54,8 @@
   }
   
   .buttonDetalle:hover {
-    background-color: #0056b3;
+    background-color: rgb(139, 139, 139);
+    color: white;
+    font-size: 1.1vh;
   }
   

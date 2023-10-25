@@ -1,0 +1,78 @@
+.containerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .label {
+    margin: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .containerForm {
+    background-color: rgb(245, 245, 245);
+    padding: 15vh;
+    border-radius: 5px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  Input {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+  }
+  
+  .BotonSubmit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: gray;
+    border: none;
+    color: white;
+  }
+
+  .BotonSubmit:hover {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: rgb(216, 216, 216);   
+    color: gray;
+  }
+
+
+  
+  .VaciarCarrito {
+    background-color: green;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .Checkout {
+    background-color: rgb(36, 36, 44);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+  

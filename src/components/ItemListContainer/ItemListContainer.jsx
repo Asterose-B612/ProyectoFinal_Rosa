@@ -19,17 +19,6 @@ const ItemListContainer = ({greeting}) => {
 {/**1° verifico que en los parametros de url tengamos una categoria, lo hacemos a traves de HOOKS,  (useParams)  */}  
     const { categoryId} = useParams()
 
-       
-    //useEffect ( () => {
-    //   const asyncFunc =  categoryId ? getProductsByCategory : getProducts
-    //     asyncFunc(categoryId)
-   //         .then( response => {
-    //            setProducts(response)
-    //})
-   // .catch(error => {
-   //     console.error(error)
-   // })
-// }, [categoryId] )
 
 useEffect (()=> {
     setLoading(true)
