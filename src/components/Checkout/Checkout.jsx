@@ -24,7 +24,7 @@ const Checkout = () => {
     email: '',
   });
 
-  const { cart, totalProducts, clearCart } = useContext(CartContext);
+  const { cart, total, clearCart } = useContext(CartContext);
 //procesa la orden de compra
   const createOrder = async ({ name, phone, email }) => {
     setLoading(true);
@@ -54,7 +54,7 @@ const Checkout = () => {
       name, phone, email
       },
       item: cart,
-      total: totalProducts,
+      total: total(),
       date: Timestamp.fromDate(new Date()),
       };
       

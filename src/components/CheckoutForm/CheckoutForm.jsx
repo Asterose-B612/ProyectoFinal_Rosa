@@ -7,7 +7,7 @@ const CheckoutForm = ({onConfirm}) => {
     const [name, setName] = useState ('')
     const [phone, setPhone] = useState ('')
     const [email, setEmail] = useState ('')
-    const [emailRepetir, setEmailRepetir] = useState ('')
+  //  const [emailRepetir, setEmailRepetir] = useState ('')
 
 const handleConfirm = (event) => {
     event.preventDefault()
