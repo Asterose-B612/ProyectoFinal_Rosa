@@ -7,12 +7,13 @@ const CheckoutForm = ({onConfirm}) => {
     const [name, setName] = useState ('')
     const [phone, setPhone] = useState ('')
     const [email, setEmail] = useState ('')
+    const [emailRepetir, setEmailRepetir] = useState ('')
 
 const handleConfirm = (event) => {
     event.preventDefault()
 
     const userData = {
-        name, phone, email
+        name, phone, email,  
     }
     onConfirm (userData)
 }
@@ -53,15 +54,15 @@ return (
                  onChange={({target}) => setEmail(target.value)  } />
             </label>
 
-            <label className='label'>
+       {/**     <label className='label'>
                 <input className='Input'
                  type ='email'
                  placeholder='Repita su email'
-                 name='email'
-                 value={email}
-                 onChange={({target}) => setEmail(target.value)  } />
+                 name='email Repetir'
+                 value={emailRepetir}
+                 onChange={({target}) => setEmailRepetir(target.value)  } />
             </label>
-
+*/} 
 
 
            <div>

@@ -46,10 +46,10 @@ const isInCart = (itemId) => {
 
 const total = () => {
   // Calcula el total sumando el precio de cada producto multiplicado por su cantidad en el carrito
-  const total = cart.reduce((acc, item) => {
+  const totalProducts = cart.reduce((acc, item) => {
     return acc + item.price * item.quantity;
   }, 0);
-  return total;
+  return totalProducts;
 };
 
 

@@ -24,8 +24,8 @@ const Checkout = () => {
     email: '',
   });
 
-  const { cart, total, clearCart } = useContext(CartContext);
-
+  const { cart, totalProducts, clearCart } = useContext(CartContext);
+//procesa la orden de compra
   const createOrder = async ({ name, phone, email }) => {
     setLoading(true);
 
@@ -47,23 +47,31 @@ const Checkout = () => {
       setLoading(false);
       return;
     }
-
+    //contiene los detalles del pedido
        try {
       const objOrder = {
       buyer: {
       name, phone, email
       },
       item: cart,
-      total: total,
+      total: totalProducts,
       date: Timestamp.fromDate(new Date()),
       };
       
+console.log ("objeto de la orden que agrego a firestore", objOrder)
+
+
+
+      //actualizar el stock de los productos en Firestore.
       const batch = writeBatch(db);
+     
+     //cumula los productos que no están en stock en un array
       const outOfStock = [];
+
       const ids = cart.map (prod => prod.id)
-      const productsRef = collection (db, 'items')
-      const productsAdaptedFromFirestore = await getDocs (query(productsRef, where (documentId(), 'in, id')))
-      const { docs } = productsAdaptedFromFirestore
+      const productsRef = collection (db, 'products')
+      const productsAddedFromFirestore = await getDocs (query(productsRef, where (documentId(), 'in', ids)))
+      const { docs } = productsAddedFromFirestore
       
       docs.forEach (doc => {
       const dataDoc = doc.data ()
@@ -87,7 +95,8 @@ const Checkout = () => {
         
         const orderRef = collection (db, 'orders')
         const orderAdded = await addDoc (orderRef, objOrder)
-        
+       
+      //  Si orderId está definido, se muestra el ID de la orden.   
         setOrderId (orderAdded.id)
         clearCart ()
         } else {
